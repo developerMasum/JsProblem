@@ -1,10 +1,10 @@
 let serial = 0;
 
-// *******-card 01 *-//////////////////////////////************/ */
+// *******-card 01 *-
 document
   .getElementById("btn-triangle-calculate")
   .addEventListener("click", function () {
-    serial += 1;
+    
     const figName = document.getElementById("first-name").innerText;
     const baseValue = getInputFieldById("base-value");
 
@@ -18,17 +18,16 @@ document
     ) {
       return alert("please enter Valid Input Value");
     }
+    serial += 1;
 
     const totalArea = 0.5 * baseValue * heightValue;
     setElementById("base", baseValue);
     setElementById("height", heightValue);
     displayDataChart(figName, totalArea.toFixed(2));
 
-    // push data in chart :
+    
   });
 
-// *--*-* functions alll***
-// **----**--/
 
 // common function call
 function setElementById(id, value) {
@@ -59,13 +58,12 @@ function displayDataChart(figName, totalArea) {
 //  *-******** get all input field id
 function getInputFieldById(elementId) {
   const inputField = document.getElementById(elementId).value;
-  // const inputString = inputField.value;
+ 
   const previousTotalInput = parseFloat(inputField);
   return previousTotalInput;
 }
 
-// card 2****--*-*-*-*-*-*-*-*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Q
-
+// card 2****--*-*-
 document
   .getElementById("btn-rectangle-calculate")
   .addEventListener("click", function () {
@@ -111,7 +109,7 @@ document
     displayDataChart(figName, totalArea.toFixed(2));
   });
 
-//   card 4 */////////////////////////////////////////
+//   card 4 */////////////
 
 document
   .getElementById("rhombus-calculate")
@@ -127,11 +125,11 @@ document
 
     const totalArea = 0.5 * diagonal1Value * diagonal2Value;
 
-    // push data in chart :
+   
     displayDataChart(figName, totalArea.toFixed(2));
   });
 
-//   card 55 /////////////////////////////
+//   card 5 ////////
 
 document
   .getElementById("pentagon-calculate")
@@ -147,11 +145,11 @@ document
 
     const totalArea = 0.5 * pentagonBValue * pentagonPValue;
 
-    // push data in chart :
+    
     displayDataChart(figName, totalArea.toFixed(2));
   });
 
-//   6th one  ///////////////////////***************** */
+//   6th one  ////////
 
 document
   .getElementById("ellipse-calculate")
@@ -167,7 +165,7 @@ document
 
     const totalArea = 3.14 * ellipseAValue * ellipseBValue;
 
-    // push data in chart :
+    
     displayDataChart(figName, totalArea.toFixed(2));
   });
 
@@ -185,38 +183,38 @@ document
     getColor();
   });
 
-// carrd 2
+// card 2
 
 const getColor2 = () => {
   const randomNumber = Math.floor(Math.random() * 16777215);
   const randomCode = "#" + randomNumber.toString(16);
   document.getElementById("color2").style.backgroundColor = randomCode;
 };
-// color for 1st card
+
 document.getElementById("color2").addEventListener("mouseover", function () {
   getColor2();
 });
 
-// card3
+// card 3
 
 const getColor3 = () => {
   const randomNumber = Math.floor(Math.random() * 16777215);
   const randomCode = "#" + randomNumber.toString(16);
   document.getElementById("color3").style.backgroundColor = randomCode;
 };
-// color for 1st card
+
 document.getElementById("color3").addEventListener("mouseover", function () {
   getColor3();
 });
 
-// card4
+// card 4
 
 const getColor4 = () => {
   const randomNumber = Math.floor(Math.random() * 16777215);
   const randomCode = "#" + randomNumber.toString(16);
   document.getElementById("color4").style.backgroundColor = randomCode;
 };
-// color for 1st card
+
 document.getElementById("color4").addEventListener("mouseover", function () {
   getColor4();
 });
@@ -227,7 +225,7 @@ const getColor5 = () => {
   const randomCode = "#" + randomNumber.toString(16);
   document.getElementById("color5").style.backgroundColor = randomCode;
 };
-// color for 1st card
+
 document.getElementById("color5").addEventListener("mouseover", function () {
   getColor5();
 });
@@ -237,7 +235,7 @@ const getColor6 = () => {
   const randomCode = "#" + randomNumber.toString(16);
   document.getElementById("color6").style.backgroundColor = randomCode;
 };
-// color for 1st card
+
 document.getElementById("color6").addEventListener("mouseover", function () {
   getColor6();
 });
