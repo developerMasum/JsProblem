@@ -10,22 +10,23 @@ document
 
     const heightValue = getInputFieldById("height-value");
 
-    // if (baseValue.value === Number || heightValue.value === Number) {
-    //   // console.log(baseValue,heightValue);
-    // }
-    // console.log(baseValue,heightValue);
+    if (baseValue <= 0 || heightValue <= 0 ||  (isNaN(baseValue)) ||  (isNaN(heightValue)) ) {
+      
+      return  alert('please enter Valid Input Value') ;
+    }
+   
+      const totalArea = 0.5 * baseValue * heightValue;
+      setElementById("base", baseValue);
+      setElementById("height", heightValue);
+      displayDataChart(figName, totalArea.toFixed(2));
+      
+   
+   
 
-    const totalArea = 0.5 * baseValue * heightValue;
-    setElementById("base", baseValue);
-    setElementById("height", heightValue);
-    displayDataChart(figName, totalArea.toFixed(2));
-
+   
     // push data in chart :
   });
-// color for 1st card
-document.getElementById("color").addEventListener("mouseover", function () {
-  getColor();
-});
+
 
 // *--*-* functions alll***
 // **----**--/
@@ -162,10 +163,81 @@ document
     displayDataChart(figName, totalArea.toFixed(2));
   });
 
-//   hover styles is Here
+  // hover styles is Here 
+  
+
 const getColor = () => {
   const randomNumber = Math.floor(Math.random() * 16777215);
   const randomCode = "#" + randomNumber.toString(16);
-  document.getElementById("color").style.backgroundColor = randomCode;
-  document.getElementById("color-2").style.backgroundColor = randomCode;
+  document.getElementById('color').style.backgroundColor = randomCode;
+  
 };
+// color for 1st card
+document.querySelector('.card-color').addEventListener("mouseover", function () {
+  getColor();
+}); 
+
+
+
+// carrd 2
+
+const getColor2 = () => {
+  const randomNumber = Math.floor(Math.random() * 16777215);
+  const randomCode = "#" + randomNumber.toString(16);
+  document.getElementById('color2').style.backgroundColor = randomCode;
+  
+};
+// color for 1st card
+document.getElementById('color2').addEventListener("mouseover", function () {
+  getColor2();
+}); 
+
+
+// card3 
+
+const getColor3 = () => {
+  const randomNumber = Math.floor(Math.random() * 16777215);
+  const randomCode = "#" + randomNumber.toString(16);
+  document.getElementById('color3').style.backgroundColor = randomCode;
+  
+};
+// color for 1st card
+document.getElementById('color3').addEventListener("mouseover", function () {
+  getColor3();
+}); 
+
+// card4
+
+const getColor4 = () => {
+  const randomNumber = Math.floor(Math.random() * 16777215);
+  const randomCode = "#" + randomNumber.toString(16);
+  document.getElementById('color4').style.backgroundColor = randomCode;
+  
+};
+// color for 1st card
+document.getElementById('color4').addEventListener("mouseover", function () {
+  getColor4();
+}); 
+
+// card5 color 
+const getColor5 = () => {
+  const randomNumber = Math.floor(Math.random() * 16777215);
+  const randomCode = "#" + randomNumber.toString(16);
+  document.getElementById('color5').style.backgroundColor = randomCode;
+  
+};
+// color for 1st card
+document.getElementById('color5').addEventListener("mouseover", function () {
+  getColor5();
+}); 
+// color 6 color
+const getColor6 = () => {
+  const randomNumber = Math.floor(Math.random() * 16777215);
+  const randomCode = "#" + randomNumber.toString(16);
+  document.getElementById('color6').style.backgroundColor = randomCode;
+  
+};
+// color for 1st card
+document.getElementById('color6').addEventListener("mouseover", function () {
+  getColor6();
+});  
