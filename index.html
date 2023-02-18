@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html data-theme="cupcake" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geometry Genius</title>
+    <!-- css file -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- header section  -->
+    <header>
+      <div class="navbar bg-cyan-100">
+        <div class="navbar-start">
+          <div>
+            <h3 class="text-2xl font- bold">Interactive</h3>
+
+            <p class="font-semibold">Geometry Genius</p>
+          </div>
+        </div>
+
+        <div class="navbar-end">
+          <button class="btn btn-info rounded-md">
+            <a href="Blog.html"> Blog</a>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- main section   -->
+    <main>
+      <section class="lg:px-12 flex flex-col md:flex-row lg:flex-row">
+        <div
+          class="products-cetails w-full md:w-[75%] lg:w-[65%] mt-5 grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
+          <!-- first card  -->
+          <div
+            id="color"
+            class="card card-compact w-full bg-base-100 shadow-xl text-center"
+          >
+            <figure>
+              <img
+                class="w-40 h-35 mt-5"
+                src="images/triangle.png"
+                alt="Shoes"
+              />
+            </figure>
+            <div class="card-body items-center text-center">
+              <div class="">
+                <h2 class="card-title mx-auto mt-5" id="first-name">
+                  Triangle
+                </h2>
+                <p class="mt-2">
+                  Area (A) = 0.5 <span>&#215;</span> <span id="base">b</span> <span>&#215;</span>
+                  <span id="height">h</span>
+                </p>
+              </div>
+              <div class="flex mt-3">
+                <input
+                  id="base-value"
+                  class="h-10/12 w-16"
+                  type="text"
+                  name=""
+                  id=""
+                  placeholder="b"
+                />
+                <p>cm</p>
+                <input
+                  id="height-value"
+                  class="h-10/12 w-16"
+                  type="text"
+                  name=""
+                  id=""
+                  placeholder="h"
+                />
+                <p>cm</p>
+              </div>
+
+              <div class="card-actions justify-end mt-5">
+                <button
+                  id="btn-triangle-calculate"
+                  class="btn btn-primary w-52 rounded px-12"
+                >
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- second card  -->
+          <div
+            class="color card card-compact w-full bg-base-100 shadow-xl text-center"
+          >
+            <figure>
+              <img
+                class="w-38 h-40 mt-5"
+                src="images/rectangle.png"
+                alt="Shoes"
+              />
+            </figure>
+            <div class="card-body items-center text-center">
+              <div class="">
+                <h2 class="card-title mx-auto mt-5" id="second-name">
+                  Rectangle
+                </h2>
+                <p class="mt-2">
+                  Area (A) = <span id="width-rec">w</span> <span>&#215;</span>
+                  <span id="length-rec">l</span>
+                </p>
+              </div>
+              <div class="flex mt-3">
+                <input
+                  id="rectangle-width-value"
+                  class="h-10/12 w-16"
+                  type="text"
+                  name=""
+                  id=""
+                  placeholder="w"
+                />
+                <p>cm</p>
+                <input
+                  id="rectangle-length-value"
+                  class="h-10/12 w-16"
+                  type="text"
+                  name=""
+                  id=""
+                  placeholder="l"
+                />
+                <p>cm</p>
+              </div>
+
+              <div class="card-actions justify-end mt-5">
+                <button
+                  id="btn-rectangle-calculate"
+                  class="btn btn-primary w-52 rounded px-12"
+                >
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- third card  -->
+          <div
+            class="card card-compact w-full bg-base-100 shadow-xl text-center"
+          >
+            <figure>
+              <img
+                class="w-35 h-33  mt-5 "
+                src="images/parallelogram.png"
+                alt="Shoes"
+              />
+            </figure>
+            <div class="card-body items-center text-center">
+              <div class="">
+                <h2 class="card-title mx-auto mt-5" id="third-name">
+                  Parallelogram
+                </h2>
+                <p class="mt-2">
+                  Area (A) = <span id="para-b">b</span> <span>&#215;</span>
+                  <span id="para-h">h</span>
+                </p>
+                <p class="mt-2 text-lg">b=10cm, h=12cm</p>
+              </div>
+              <div class="flex mt-3">
+                <input
+                  id="parallelogram-base-value"
+                  class="h-10/12 w-16"
+                  type="text"
+                  name=""
+                  id=""
+                  placeholder="b"
+                />
+                <p>cm</p>
+                <input
+                  id="parallelogram-height-value"
+                  class="h-10/12 w-16"
+                  type="text"
+                  name=""
+                  id=""
+                  placeholder="h"
+                />
+                <p>cm</p>
+              </div>
+
+              <div class="card-actions justify-end mt-5">
+                <button
+                  id="parallelogram-calculate"
+                  class="btn btn-primary w-52 rounded px-12"
+                >
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- fourth card  -->
+          <div id="color-2"
+            class="card card-compact w-full bg-base-100 shadow-xl text-center"
+          >
+            <figure>
+              <img
+                class="w-42 h-41 mt-5"
+                src="images/rhombus.png"
+                alt="Shoes"
+              />
+            </figure>
+            <div class="card-body items-center text-center">
+              <div class="">
+                <h2 class="card-title mx-auto mt-5" id="fourth-name">
+                  Rhombus
+                </h2>
+                <p class="mt-2">
+                  Area (A) = 0.5 <span id="rhom-d1">d<sub>1</sub></span> <span>&#215;</span>
+                  <span id="rhom-d2">d<sub>2</sub></span>
+                </p>
+                <p class="mt-2 text-lg">
+                  d<sub>1</sub> = 16cm d<sub>2</sub> = 8cm
+                </p>
+              </div>
+              <div class="flex mt-3">
+                <input
+                  id="rhombus-d1-value"
+                  class="h-10/12 w-16"
+                  type="text"
+                  name=""
+                  id=""
+                  placeholder="d1"
+                />
+                <p>cm</p>
+                <input
+                  id="rhombus-d2-value"
+                  class="h-10/12 w-16"
+                  type="text"
+                  name=""
+                  id=""
+                  placeholder="d2"
+                />
+                <p>cm</p>
+              </div>
+
+              <div class="card-actions justify-end mt-5">
+                <button
+                  id="rhombus-calculate"
+                  class="btn btn-primary w-52 rounded px-12"
+                >
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- fifth card  -->
+
+          <div id="color-2"
+            class="card card-compact w-full bg-base-100 shadow-xl text-center"
+          >
+            <figure>
+              <img class="w-41 h-41 mt-5" src="images/pentagon.png" alt="" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <div class="">
+                <h2 class="card-title mx-auto mt-5" id="fifth-name">
+                  Pentagon
+                </h2>
+                <p class="mt-2">
+                  Area (A) = 0.5 <span>&#215;</span> <span id="penta-p">p</span> <span>&#215;</span>
+                  <span id="penta-b">b</span>
+                </p>
+                <p class="mt-2 text-lg">p = 6cm, b = 10cm</p>
+              </div>
+              <div class="flex mt-3">
+                <input
+                  class="h-10/12 w-16"
+                  type="text"
+                  name=""
+                  id="pentagon-p-value"
+                  placeholder="p"
+                />
+                <p>cm</p>
+                <input
+                  class="h-10/12 w-16"
+                  type="text"
+                  name=""
+                  id="pentagon-b-value"
+                  placeholder="b"
+                />
+                <p>cm</p>
+              </div>
+
+              <div class="card-actions justify-end mt-5">
+                <button
+                  id="pentagon-calculate"
+                  class="btn btn-primary w-52 rounded px-12"
+                >
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- sixth card  -->
+
+          <div
+            class="card card-compact w-full bg-base-100 shadow-xl text-center"
+          >
+            <figure>
+              <img
+                class="w-43 h-39 mt-5"
+                src="images/ellipse.png"
+                alt="Shoes"
+              />
+            </figure>
+            <div class="card-body items-center text-center">
+              <div class="">
+                <h2 class="card-title mx-auto mt-5" id="sixth-name">Ellipse</h2>
+                <p class="mt-2">
+                  Area (A) = π <span>&#215;</span> <span id="elli-a">a</span> <span>&#215;</span>
+                  <span id="elli-b">b</span>
+                </p>
+                <p class="mt-2 text-lg">a = 10cm, b = 4cm</p>
+              </div>
+              <div class="flex mt-3">
+                <input
+                  class="h-10/12 w-16"
+                  type="text"
+                  name=""
+                  id="ellipse-a-value"
+                  placeholder="a"
+                />
+                <p>cm</p>
+                <input
+                  class="h-10/12 w-16"
+                  type="text"
+                  name=""
+                  id="ellipse-b-value"
+                  placeholder="b"
+                />
+                <p>cm</p>
+              </div>
+
+              <div class="card-actions justify-end mt-5">
+                <button
+                  id="ellipse-calculate"
+                  class="btn btn-primary w-52 rounded px-12"
+                >
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- last card  -->
+      
+        </div>
+
+        <!-- cart details div  -->
+        <div class="cart-details w-full md:w-[32%] lg:w-[32%] mx-auto">
+          <h3 class="text-lg text-center font-bold underline mt-5">
+            Area Calculation
+            <hr />
+          </h3>
+          <div class="overflow-x-auto">
+            <table class="table w-full">
+              <!-- <thead>
+                    <tr>
+                      <th>No</th>
+                      <th>Name</th>
+                      <th>Total</th>
+                    </tr>
+                  </thead> -->
+              <tbody id="table-container">
+                <!-- <tr>
+                      <th>1</th>
+                      <td>Cy Ganderton</td>
+                      <td>Quality Control Specialist</td>
+                      <td>Blue</td>
+                    </tr> -->
+                    <!-- <button class="btn btn-sm"> Convert to m<sup>2</sup></button> -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- js file -->
+    <script src="js/JavaScript.js"></script>
+  </body>
+</html>
